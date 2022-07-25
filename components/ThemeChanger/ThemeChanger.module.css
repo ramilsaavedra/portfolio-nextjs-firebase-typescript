@@ -1,0 +1,11 @@
+.wrap {
+  background: var(--theme-changer-background);
+  border-radius: 15px;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: auto;
+}

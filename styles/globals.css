@@ -1,9 +1,75 @@
+:root {
+  --primary: #bc0735;
+  --secondary: #8b0c2c;
+  --background: #f9fafb;
+  --active-link: #222;
+  --link: #444;
+  --theme-changer-background: #e0e0e0;
+  --heading-1-color: #000;
+  --subheading-color: #333;
+  --description-color: #444;
+}
+
+[data-theme='dark'] {
+  --background: #111;
+  --active-link: #fff;
+  --link: #888;
+  --theme-changer-background: #555;
+  --heading-1-color: #fff;
+  --subheading-color: #eaeaea;
+  --description-color: #888;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  background: var(--background);
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(188, 7, 53, 1) 50%,
+    rgba(188, 7, 53, 1) 100%
+  );
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h5 {
+  font-size: 20px;
 }
 
 a {
@@ -13,14 +79,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
