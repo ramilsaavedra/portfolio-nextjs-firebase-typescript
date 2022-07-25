@@ -1,0 +1,11 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.text {
+  color: var(--primary);
+  text-decoration: underline;
+  margin-right: 5px;
+}
