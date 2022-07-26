@@ -18,15 +18,16 @@ const Header: React.FC = () => {
         <Link href='/'>
           <a style={asPath === '/' ? activeStyle : {}}>Home</a>
         </Link>
+        <Link href='/about'>
+          <a style={asPath === '/about' ? activeStyle : {}}>About</a>
+        </Link>
         <Link href='/projects'>
           <a style={asPath === '/projects' ? activeStyle : {}}>Projects</a>
         </Link>
         <Link href='/snippets'>
           <a style={asPath === '/snippets' ? activeStyle : {}}>Snippets</a>
         </Link>
-        <Link href='/about'>
-          <a style={asPath === '/about' ? activeStyle : {}}>About</a>
-        </Link>
+
         <ThemeChanger />
       </div>
     </header>
