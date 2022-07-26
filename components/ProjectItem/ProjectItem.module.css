@@ -1,0 +1,22 @@
+.wrap {
+  margin-top: 25px;
+}
+
+.title {
+  color: var(--heading-3-color);
+}
+
+.description {
+  margin-top: 15px;
+  color: var(--description-color);
+  line-height: 25px;
+  max-width: 600px;
+}
+
+.linkDiv {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 20px;
+}
