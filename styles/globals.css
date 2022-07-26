@@ -11,6 +11,8 @@
   --description-color: #444;
   --custom-link: #666;
   --footer-link: #444;
+  --tech-background: #dcdcdc;
+  --tech-color: #000;
 }
 
 [data-theme='dark'] {
@@ -24,6 +26,8 @@
   --description-color: #888;
   --custom-link: #999;
   --footer-link: #888;
+  --tech-background: #000;
+  --tech-color: #fff;
 }
 
 html,
@@ -35,6 +39,7 @@ body {
 }
 
 html {
+  overflow-y: scroll;
   scroll-behavior: smooth;
 }
 
