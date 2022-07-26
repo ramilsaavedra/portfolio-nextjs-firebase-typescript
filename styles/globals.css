@@ -6,8 +6,11 @@
   --link: #444;
   --theme-changer-background: #e0e0e0;
   --heading-1-color: #000;
+  --heading-3-color: #111;
   --subheading-color: #333;
   --description-color: #444;
+  --custom-link: #666;
+  --footer-link: #444;
 }
 
 [data-theme='dark'] {
@@ -16,8 +19,11 @@
   --link: #888;
   --theme-changer-background: #555;
   --heading-1-color: #fff;
+  --heading-3-color: #fff;
   --subheading-color: #eaeaea;
   --description-color: #888;
+  --custom-link: #999;
+  --footer-link: #888;
 }
 
 html,
@@ -26,6 +32,10 @@ body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
   background: var(--background);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body::before {
