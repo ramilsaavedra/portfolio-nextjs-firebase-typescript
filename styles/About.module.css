@@ -1,0 +1,99 @@
+.container {
+  max-width: 760px;
+  /* min-width: 760px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+.contactInfo,
+.links,
+.bio,
+.tech {
+  margin-top: 30px;
+  color: var(--heading-3-color);
+}
+
+.contactWrap {
+  margin-top: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 70px auto auto 1fr;
+  gap: 10px;
+}
+
+.contactWrap p {
+  font-weight: bold;
+}
+
+.contactWrapCopyButton {
+  cursor: pointer;
+  position: relative;
+}
+
+.contactWrapCopyButton::before {
+  content: 'Copy to clipboard';
+  visibility: hidden;
+  padding: 5px 0;
+  width: 150px;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  top: -2px;
+  left: 35px;
+  background: var(--tech-background);
+  color: var(--tech-color);
+}
+
+.contactWrapCopyButton:hover::before {
+  visibility: visible;
+}
+
+.linkWrap {
+  display: grid;
+  grid-template-columns: 70px auto 1fr;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.link {
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.link:hover {
+  color: #1d4ed8;
+}
+
+.bio {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+}
+
+.bioText {
+  margin-top: 15px;
+  color: var(--description-color);
+  line-height: 25px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.goToButton {
+  margin-top: 25px;
+}
+
+.techSubheading {
+  margin-top: 5px;
+  color: var(--subheading-color);
+}
+
+.tech ul {
+  columns: 2;
+}
+
+.tech li {
+  margin-top: 15px;
+}
