@@ -1,6 +1,12 @@
 import React from 'react';
 import style from './CodeSnippet.module.css';
 
+interface CodeSnippetProps {
+  tech: 'css' | 'react' | 'js' | 'html';
+  title: string;
+  description: string;
+}
+
 const CodeSnippet: React.FC = () => {
   return (
     <div className={style.wrap}>
