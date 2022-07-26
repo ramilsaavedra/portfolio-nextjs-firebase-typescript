@@ -20,3 +20,9 @@
 .subDiv a {
   color: var(--footer-link);
 }
+
+.credits {
+  grid-column: 3/-1;
+  color: var(--footer-link);
+  font-weight: 300;
+}
