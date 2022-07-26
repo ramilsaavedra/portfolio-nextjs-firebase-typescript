@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import Link from 'next/link';
 import style from './GoToPage.module.css';
 
 interface GoToPageProps {
   children: React.ReactNode;
   href: string;
+  className?: string;
 }
 
-const GoToPage: React.FC<GoToPageProps> = ({ children, href }) => {
+const GoToPage: React.FC<GoToPageProps> = ({ children, href, className }) => {
   return (
     <Link href={href}>
-      <div className={style.wrap}>
+      <div className={`${className} ${style.wrap}`}>
         <p className={style.text}>{children}</p>
         <svg
           width='15'
