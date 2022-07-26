@@ -6,6 +6,30 @@
   color: var(--heading-3-color);
 }
 
+.techWrap {
+  margin-top: 10px;
+  color: var(--subheading-color);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.techItemWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.techItem {
+  font-size: 14px;
+  font-weight: normal;
+  background: var(--tech-background);
+  padding: 3px 15px;
+  border-radius: 15px;
+  color: var(--tech-color);
+}
+
 .description {
   margin-top: 15px;
   color: var(--description-color);

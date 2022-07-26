@@ -51,6 +51,15 @@ const Footer: React.FC = () => {
               <a>Snippets</a>
             </Link>
           </div>
+          <div className={style.credits}>
+            <a
+              href='https://github.com/ramilsaavedra/portfolio-nextjs-firebase-typescript'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Built and Designed with &#10084;&#65039;
+            </a>
+          </div>
         </div>
       </footer>
     </>

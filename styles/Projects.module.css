@@ -1,0 +1,27 @@
+.container {
+  max-width: 760px;
+  min-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+.container h1 {
+  color: var(--heading-1-color);
+}
+
+.subheading {
+  color: var(--subheading-color);
+  margin-top: 5px;
+}
+
+.projectsDiv {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.goToAboutButton {
+  margin-top: 15px;
+}

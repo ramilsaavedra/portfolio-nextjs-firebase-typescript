@@ -5,16 +5,18 @@ import style from './ProjectItem.module.css';
 
 interface ProjectItemProps {
   title: string;
+  techs?: string[];
   description: string;
-  homeUrl?: string;
-  homeText?: string;
-  codeUrl?: string;
-  codeText?: string;
+  homeUrl?: string | null;
+  homeText?: string | null;
+  codeUrl?: string | null;
+  codeText?: string | null;
   imageSrc?: string;
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = ({
   title,
+  techs,
   description,
   homeUrl,
   homeText,
@@ -25,6 +27,20 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   return (
     <div className={style.wrap}>
       <h3 className={style.title}>{title}</h3>
+      {techs && (
+        <div className={style.techWrap}>
+          <p>Tech:</p>
+          <div className={style.techItemWrap}>
+            {techs.map((tech, index) => {
+              return (
+                <div className={style.techItem} key={index}>
+                  {tech}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
       <p className={style.description}>{description}</p>
       <div className={style.linkDiv}>
         {homeUrl && homeText && (

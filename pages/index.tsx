@@ -10,24 +10,26 @@ const Home: NextPage = () => {
       <Head>
         <title>Ramil Saavedra | Software Engineer</title>
       </Head>
-      <h1>Ramil Saavedra</h1>
-      <p className={styles.subheading}>Software Engineer</p>
-      <p className={styles.description}>
-        Hi!👋 I’m a software engineer from the Philippines. I just love spending
-        my time admiring the beauty of web development, from learning new
-        technologies to building web application that can heavily contribute to
-        the community.
-      </p>
-      <div className={styles.ctaDiv}>
-        <a
-          className={styles.downloadCVButton}
-          href='/static/Resume.pdf'
-          target='_blank'
-          rel='noreferrer'
-        >
-          Download CV
-        </a>
-        <GoToPage href='/about'>Go to about page</GoToPage>
+      <div className={styles.landing}>
+        <h1>Ramil Saavedra</h1>
+        <p className={styles.subheading}>Software Engineer</p>
+        <p className={styles.description}>
+          Hi!👋 I’m a software engineer from the Philippines. I just love
+          spending my time admiring the beauty of web development, from learning
+          new technologies to building web application that can heavily
+          contribute to the community.
+        </p>
+        <div className={styles.ctaDiv}>
+          <a
+            className={styles.downloadCVButton}
+            href='/static/Resume.pdf'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Download CV
+          </a>
+          <GoToPage href='/about'>Go to about page</GoToPage>
+        </div>
       </div>
 
       <div className={styles.featuredProjectDiv}>
@@ -35,6 +37,7 @@ const Home: NextPage = () => {
 
         <ProjectItem
           title='Web Blocker'
+          techs={['React', 'Typescript', 'Webpack', 'Manifest V3', 'Figma']}
           description='A free chrome extension built with React and Typescript with Webpack configuration. It lets the user block distracting website to keep the user focus and improve their productivity.'
           imageSrc='/static/images/projects/webblocker.png'
           homeUrl='https://www.webblockerextension.com/'
