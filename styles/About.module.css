@@ -14,6 +14,13 @@
   color: var(--heading-3-color);
 }
 
+.contactInfo li,
+.links li,
+.bio li,
+.tech li {
+  color: var(--footer-link);
+}
+
 .contactWrap {
   margin-top: 10px;
   display: grid;

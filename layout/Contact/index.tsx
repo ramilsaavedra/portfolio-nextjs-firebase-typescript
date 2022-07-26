@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
         target='_blank'
         rel='noreferrer'
       >
-        Email Me
+        Say Hi!
       </a>
     </div>
   );
