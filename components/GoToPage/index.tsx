@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import style from './GoToPage.module.css';
 

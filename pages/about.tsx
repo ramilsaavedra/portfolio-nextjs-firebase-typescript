@@ -16,7 +16,7 @@ const about: NextPage = () => {
       <h1>About Me</h1>
       <div className={styles.bio}>
         <div>
-          <h5>Hello World!👋Ramil here and welcome to my website.</h5>
+          <h5>Hello World, Ramil here!👋 Welcome to my website.</h5>
           <p className={styles.bioText}>
             Im a web developer from the Philippines. I simply enjoy every aspect
             of web development, the never-ending learning, the satisfication

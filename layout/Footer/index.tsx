@@ -37,12 +37,12 @@ const Footer: React.FC = () => {
           </a>
         </div>
         <div className={style.subDiv}>
-          <Link href='/experiences'>
+          {/* <Link href='/experiences'>
             <a>Experiences</a>
           </Link>
           <Link href='/certificates'>
             <a>Certificates</a>
-          </Link>
+          </Link> */}
 
           <Link href='/snippets'>
             <a>Snippets</a>
