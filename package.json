@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/spotify-api": "^0.0.16",
+    "axios": "^0.27.2",
     "next": "12.2.3",
     "next-themes": "^0.2.0",
     "react": "18.2.0",

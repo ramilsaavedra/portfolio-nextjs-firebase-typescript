@@ -1,11 +1,13 @@
 import React from 'react';
 import style from './Footer.module.css';
 import Link from 'next/link';
+import SpotifyCurrentlyPlaying from '../../components/SpotifyCurrentlyPlaying';
 
 const Footer: React.FC = () => {
   return (
     <footer>
       <div className={style.mainDiv}>
+        <SpotifyCurrentlyPlaying />
         <div className={style.subDiv}>
           <a href='/static/Resume.pdf' target='_blank' rel='noreferrer'>
             Download CV
