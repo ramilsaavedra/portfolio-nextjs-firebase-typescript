@@ -5,6 +5,7 @@ import GoToPage from '../components/GoToPage';
 import ProjectItem from '../components/ProjectItem';
 import Contact from '../layout/Contact';
 import CodeSnippet from '../components/CodeSnippet';
+import codes from '../mock_data/codes';
 
 const snippets: NextPage = () => {
   return (
@@ -19,10 +20,14 @@ const snippets: NextPage = () => {
           can be used in multiple projects for faster development
         </p>
         <div className={styles.codeWrap}>
-          <CodeSnippet />
-          <CodeSnippet />
-          <CodeSnippet />
-          <CodeSnippet />
+          {codes.map((code) => (
+            <CodeSnippet
+              key={code.id}
+              title={code.title}
+              description={code.description}
+              tech={code.tech}
+            />
+          ))}
         </div>
       </div>
       <Contact />
