@@ -13,6 +13,9 @@
   --footer-link: #444;
   --tech-background: #dcdcdc;
   --tech-color: #000;
+  --menu-wrap-color: rgba(245, 245, 245, 0.95);
+
+  --container-top-margin: 60px;
 }
 
 [data-theme='dark'] {
@@ -28,6 +31,7 @@
   --footer-link: #888;
   --tech-background: #000;
   --tech-color: #fff;
+  --menu-wrap-color: rgba(0, 0, 0, 0.95);
 }
 
 html,
@@ -94,4 +98,28 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  max-width: 760px;
+  min-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    --container-top-margin: 50px;
+  }
+
+  body {
+    margin-top: 90px;
+  }
+
+  .container {
+    max-width: auto;
+    min-width: auto;
+    margin: 15px;
+  }
 }

@@ -18,3 +18,37 @@
   margin-left: 5px;
   color: var(--description-color);
 }
+
+.songWrap .artists {
+  margin-left: 0px;
+}
+
+.songWrap {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+}
+
+.hypen {
+  margin: 0 5px;
+  color: var(--description-color);
+}
+
+@media only screen and (max-width: 598px) {
+  .wrap {
+    grid-column: auto / auto;
+  }
+
+  .hypen {
+    display: none;
+  }
+
+  .songWrap {
+    grid-template-columns: 1fr;
+  }
+
+  .songWrap .artists {
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+}

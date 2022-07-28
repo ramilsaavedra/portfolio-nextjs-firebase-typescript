@@ -8,7 +8,7 @@ import Contact from '../layout/Contact';
 const Home: NextPage = () => {
   return (
     <>
-      <div className={styles.container}>
+      <div className={`container ${styles.container}`}>
         <Head>
           <title>Ramil Saavedra | Software Engineer</title>
         </Head>
@@ -16,10 +16,10 @@ const Home: NextPage = () => {
           <h1>Ramil Saavedra</h1>
           <p className={styles.subheading}>Software Engineer</p>
           <p className={styles.description}>
-            Hi!👋 I’m a software engineer from the Philippines. I just love
-            spending my time admiring the beauty of web development, from
-            learning new technologies to building web application that can
-            heavily contribute to the community.
+            Hi!👋 I am a software engineer from the Philippines. I love spending
+            my time admiring the beauty of web development, from learning new
+            technologies to building a web application that can heavily
+            contribute to the community.
           </p>
           <div className={styles.ctaDiv}>
             <a
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
           <ProjectItem
             title='Web Blocker'
             techs={['React', 'Typescript', 'Webpack', 'Manifest V3', 'Figma']}
-            description='A free chrome extension built with React and Typescript with Webpack configuration. It lets the user block distracting website to keep the user focus and improve their productivity.'
+            description='A chrome extension built with React and Typescript with Webpack lets the user block distracting websites to keep the user focused and improve their productivity.'
             imageSrc='/static/images/projects/webblocker.png'
             homeUrl='https://www.webblockerextension.com/'
             homeText='Visit website'
@@ -55,19 +55,19 @@ const Home: NextPage = () => {
         <div className={styles.labDiv}>
           <h2>Lab</h2>
           <p className={styles.subheading}>
-            This section shows what I’m currently working or studying.
+            This section shows what I’m currently working on or studying.
           </p>
 
           <ProjectItem
             title='React 2025'
-            description='This course teaches how to build a production grade SaaS business using modern technologies (Next.js, React, Firebase Authentication, Firestore, and Stripe)'
+            description='This course teaches how to build a production-grade SaaS business using modern technologies (Next.js, React, Firebase Authentication, Firestore, and Stripe)'
             homeUrl='https://react2025.com/'
             homeText='View course'
           />
 
           <ProjectItem
             title='Node with React: Fullstack Web Development'
-            description='This courses teaches how to build and deploy fullstack web app with NodeJS, React, Redux, Express and MongoDB'
+            description='This courses teaches how to build and deploy fullstack web app with NodeJS, React, Redux, Express and MongoDB.'
             homeUrl='https://www.udemy.com/course/node-with-react-fullstack-web-development/'
             homeText='View course'
           />

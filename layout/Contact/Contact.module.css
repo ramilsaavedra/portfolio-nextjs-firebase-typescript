@@ -1,8 +1,5 @@
 .wrap {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 60px;
+  margin-top: var(--container-top-margin);
 }
 
 .title {
@@ -26,4 +23,10 @@
 
 .emailMeButton:active {
   background-color: var(--secondary);
+}
+
+@media only screen and (max-width: 768px) {
+  .description {
+    margin-bottom: 25px;
+  }
 }

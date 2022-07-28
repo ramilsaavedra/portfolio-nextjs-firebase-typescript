@@ -4,7 +4,7 @@ import Button from '../../components/Button';
 
 const Contact: React.FC = () => {
   return (
-    <div className={style.wrap}>
+    <div className={`container ${style.wrap}`}>
       <h2 className={style.title}>Get in touch</h2>
       <p className={style.description}>
         If you have any questions, talk about new opportunities or just want to

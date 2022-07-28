@@ -6,7 +6,7 @@ import SpotifyCurrentlyPlaying from '../../components/SpotifyCurrentlyPlaying';
 const Footer: React.FC = () => {
   return (
     <footer>
-      <div className={style.mainDiv}>
+      <div className={`container ${style.mainDiv}`}>
         <SpotifyCurrentlyPlaying />
         <div className={style.subDiv}>
           <a href='/static/Resume.pdf' target='_blank' rel='noreferrer'>

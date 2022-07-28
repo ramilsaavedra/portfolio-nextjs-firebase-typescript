@@ -9,7 +9,7 @@ const about: NextPage = () => {
     navigator.clipboard.writeText(value);
   };
   return (
-    <div className={styles.container}>
+    <div className={`container ${styles.container}`}>
       <Head>
         <title>About Me | Ramil Saavedra</title>
       </Head>
@@ -18,16 +18,16 @@ const about: NextPage = () => {
         <div>
           <h5>Hello World, Ramil here!👋 Welcome to my website.</h5>
           <p className={styles.bioText}>
-            Im a web developer from the Philippines. I simply enjoy every aspect
-            of web development, the never-ending learning, the satisfication
-            when you solved a problem, the heart-warming feedback from the user,
-            the welcoming community, the annoying bugs and the ability to turn
-            ideas to reality.
+            I am a web developer from the Philippines. I simply enjoy every
+            aspect of web development, the never-ending learning, the
+            satisfaction when you solved a problem, the heart-warming feedback
+            from the user, the welcoming community, the annoying bugs, and the
+            ability to turn ideas into reality.
           </p>
           <p className={styles.bioText}>
-            In my 4 years experience in the industry. I already built multiple
-            projects from static to complex web application using different
-            tools and technologies
+            In 4 years of experience in the industry, I built multiple projects
+            from static to complex web applications using different tools and
+            technologies.
           </p>
         </div>
         <div>
