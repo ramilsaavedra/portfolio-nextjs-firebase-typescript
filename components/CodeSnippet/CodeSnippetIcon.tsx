@@ -114,7 +114,7 @@ const CodeSnippetIcon: React.FC<CodeSnippetIconProps> = ({ icon }) => {
     );
   }
 
-  if (icon === 'react') {
+  if (icon === 'tsx') {
     return (
       <svg
         width='30'
