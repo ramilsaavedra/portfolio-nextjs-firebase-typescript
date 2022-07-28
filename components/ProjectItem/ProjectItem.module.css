@@ -16,7 +16,9 @@
 }
 
 .techItemWrap {
-  display: flex;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(95px, auto));
   align-items: center;
   gap: 10px;
 }
@@ -27,7 +29,9 @@
   background: var(--tech-background);
   padding: 3px 15px;
   border-radius: 15px;
+  text-align: center;
   color: var(--tech-color);
+  white-space: nowrap;
 }
 
 .description {
@@ -43,4 +47,10 @@
   display: grid;
   grid-template-columns: auto auto 1fr;
   gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .techWrap p:first-child {
+    align-self: start;
+  }
 }

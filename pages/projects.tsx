@@ -9,7 +9,7 @@ import { projects } from '../mock_data/projects';
 const Projects: NextPage = () => {
   return (
     <>
-      <div className={styles.container}>
+      <div className={`container ${styles.container}`}>
         <Head>
           <title>Projects | Ramil Saavedra</title>
         </Head>

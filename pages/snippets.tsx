@@ -10,7 +10,7 @@ import codes from '../mock_data/codes';
 const snippets: NextPage = () => {
   return (
     <>
-      <div className={styles.container}>
+      <div className={`container ${styles.container}`}>
         <Head>
           <title>Code Snippets | Ramil Saavedra</title>
         </Head>

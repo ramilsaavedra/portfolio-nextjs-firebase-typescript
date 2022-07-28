@@ -1,9 +1,6 @@
 .mainDiv {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: var(--container-top-margin);
+  margin-bottom: 10px;
   padding: 25px 0px;
   border-top: 2px solid var(--description-color);
   display: grid;
@@ -25,4 +22,16 @@
   grid-column: 3/-1;
   color: var(--footer-link);
   font-weight: 300;
+  text-align: right;
+}
+
+@media only screen and (max-width: 598px) {
+  .mainDiv {
+    gap: 20px 10px;
+    margin-bottom: 0px;
+    grid-template-columns: 1fr;
+  }
+  .credits {
+    grid-column: auto / auto;
+  }
 }

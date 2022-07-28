@@ -3,7 +3,7 @@ const projects = [
     title: 'Web Blocker',
     techs: ['React', 'Typescript', 'Webpack', 'Manifest V3', 'Figma'],
     description:
-      'A free chrome extension built with React and Typescript with Webpack configuration. It lets the user block distracting website to keep the user focus and improve their productivity.',
+      'A chrome extension built with React and Typescript with Webpack lets the user block distracting websites to keep the user focused and improve their productivity.',
     imageSrc: '/static/images/projects/webblocker.png',
     homeUrl: 'https://www.webblockerextension.com/',
     homeText: 'Visit website',
@@ -14,7 +14,7 @@ const projects = [
     title: 'Fans.ph',
     techs: ['Laravel', 'Blade', 'Adobe Illustrator'],
     description:
-      'A website created so fans can book personalized shout-outs from their favorite celebrities',
+      'A website created for fans can book personalized shout-outs from their favorite celebrities.',
     imageSrc: '/static/images/projects/fansph.png',
     homeUrl: 'https://www.fans.ph/',
     homeText: 'Visit website',
@@ -25,7 +25,7 @@ const projects = [
     title: 'Minimart.ph',
     techs: ['Laravel', 'PHP', 'Javascript', 'MySQL'],
     description:
-      'An e-commerce website that was built during the pandemic to help customers to get their daily needs right without leaving their homes',
+      'An e-commerce website that was built during the pandemic to help customers to get their daily needs right without leaving their homes.',
     imageSrc: '/static/images/projects/minimartph.png',
     homeUrl: 'https://www.minimart.ph/',
     homeText: 'Visit website',
@@ -37,7 +37,7 @@ const projects = [
     title: 'Flowerstore.ph',
     techs: ['Laravel', 'PHP', 'Javascript', 'MySQL'],
     description:
-      'An e-commerce flowershop started from the Philippines and slowly expanding to other parts of Asia (Vietnam and Thailand)',
+      'An e-commerce flower shop started in the Philippines and slowly expanded to other parts of Asia (Vietnam and Thailand)',
     imageSrc: '/static/images/projects/flowerstoreph.png',
     homeUrl: 'https://flowerstore.ph/en',
     homeText: 'Visit website',

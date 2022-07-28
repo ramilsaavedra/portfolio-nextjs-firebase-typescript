@@ -1,11 +1,3 @@
-.container {
-  max-width: 760px;
-  /* min-width: 760px; */
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
-}
-
 .landing h1 {
   color: var(--heading-1-color);
 }
@@ -43,7 +35,7 @@
 }
 
 .featuredProjectDiv {
-  margin-top: 60px;
+  margin-top: var(--container-top-margin);
 }
 
 .goToProjects {
@@ -51,5 +43,5 @@
 }
 
 .labDiv {
-  margin-top: 60px;
+  margin-top: var(--container-top-margin);
 }

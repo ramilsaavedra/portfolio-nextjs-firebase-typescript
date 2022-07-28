@@ -74,11 +74,11 @@ const SpotifyCurrentlyPlaying: React.FC = () => {
         height={40}
         width={40}
       />
-      <p className={style.name}>{data.item.name}</p>
-      {/* <p className={style.artists}>&#8212; {data.item.artists[0].name}</p> */}
-      <p className={style.artists}>
-        &#8212; {artistsNameHandler(data.item.artists)}
-      </p>
+      <div className={style.songWrap}>
+        <p className={style.name}>{data.item.name}</p>
+        <p className={style.hypen}>&#8212;</p>
+        <p className={style.artists}>{artistsNameHandler(data.item.artists)}</p>
+      </div>
     </a>
   );
 };
