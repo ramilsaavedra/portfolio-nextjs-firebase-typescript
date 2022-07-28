@@ -1,4 +1,4 @@
-interface CodesProps {
+export interface CodesProps {
   id: number;
   title: string;
   slug: string;

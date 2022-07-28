@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import styles from '../styles/About.module.css';
 import GoToPage from '../components/GoToPage';
+import LinkButton from '../components/LinkButton';
 
 const about: NextPage = () => {
   const copyToClipBoard = (value: string) => {
@@ -60,6 +61,7 @@ const about: NextPage = () => {
           <li>MySQL</li>
         </ul>
       </div>
+
       <div className={styles.links}>
         <h3>Links</h3>
         <ul>
@@ -184,9 +186,8 @@ const about: NextPage = () => {
           </li>
         </ul>
       </div>
-      <GoToPage className={styles.goToButton} href='/projects'>
-        See all projects
-      </GoToPage>
+
+      <GoToPage href='/projects'>See all projects</GoToPage>
     </div>
   );
 };

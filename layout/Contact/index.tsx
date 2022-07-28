@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './Contact.module.css';
 import Button from '../../components/Button';
+import LinkButton from '../../components/LinkButton';
 
 const Contact: React.FC = () => {
   return (
@@ -10,14 +11,9 @@ const Contact: React.FC = () => {
         If you have any questions, talk about new opportunities or just want to
         say hi, feel free to contact me
       </p>
-      <a
-        href='mailto:rdsaavedra15@gmail.com?subject=Hi!'
-        className={style.emailMeButton}
-        target='_blank'
-        rel='noreferrer'
-      >
+      <LinkButton href='mailto:rdsaavedra15@gmail.com?subject=Hi!'>
         Say Hi!
-      </a>
+      </LinkButton>
     </div>
   );
 };

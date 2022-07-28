@@ -1,13 +1,13 @@
-import type { NextPage } from 'next';
+import type { NextPage, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
-import styles from '../styles/Snippets.module.css';
-import GoToPage from '../components/GoToPage';
-import ProjectItem from '../components/ProjectItem';
-import Contact from '../layout/Contact';
-import CodeSnippet from '../components/CodeSnippet';
-import codes from '../mock_data/codes';
+import styles from '../../styles/Snippets.module.css';
+import Contact from '../../layout/Contact';
+import CodeSnippet from '../../components/CodeSnippet';
+import codes, { CodesProps } from '../../mock_data/codes';
 
-const snippets: NextPage = () => {
+const snippets: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  data,
+}) => {
   return (
     <>
       <div className={`container ${styles.container}`}>
@@ -20,8 +20,11 @@ const snippets: NextPage = () => {
           can be used in multiple projects for faster development
         </p>
         <div className={styles.codeWrap}>
-          {codes.map((code) => (
+          {data.map((code) => (
             <CodeSnippet
+              href={{
+                pathname: `/snippets/${code.slug}`,
+              }}
               key={code.id}
               title={code.title}
               description={code.description}
@@ -34,4 +37,11 @@ const snippets: NextPage = () => {
     </>
   );
 };
+
+export const getStaticProps = () => {
+  const data: CodesProps[] = codes;
+
+  return { props: { data } };
+};
+
 export default snippets;

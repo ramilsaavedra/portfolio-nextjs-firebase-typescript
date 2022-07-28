@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import GoToPage from '../components/GoToPage';
 import ProjectItem from '../components/ProjectItem';
 import Contact from '../layout/Contact';
+import LinkButton from '../components/LinkButton';
 
 const Home: NextPage = () => {
   return (
@@ -22,14 +23,7 @@ const Home: NextPage = () => {
             contribute to the community.
           </p>
           <div className={styles.ctaDiv}>
-            <a
-              className={styles.downloadCVButton}
-              href='/static/Resume.pdf'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Download CV
-            </a>
+            <LinkButton href='/static/Resume.pdf'>Download CV</LinkButton>
             <GoToPage href='/about'>Go to about page</GoToPage>
           </div>
         </div>
