@@ -17,7 +17,6 @@ const SpotifyCurrentlyPlaying: React.FC = () => {
 
   const nowPlaying = async () => {
     const res = await getCurrentlyPlaying();
-    console.log(res);
     setData(res);
   };
 

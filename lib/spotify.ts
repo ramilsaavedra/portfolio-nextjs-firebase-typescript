@@ -12,7 +12,6 @@ type GetRefreshableUserTokensResponse = {
 };
 
 const getAccessToken = async () => {
-  console.log(refresh_token, 'test');
   const params = new URLSearchParams();
   params.append('grant_type', 'refresh_token');
 
