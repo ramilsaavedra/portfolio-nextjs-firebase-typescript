@@ -15,6 +15,19 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--primary);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.codeDescription {
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
 @media only screen and (max-width: 598px) {
   .codeWrap {
     grid-template-columns: 1fr;
