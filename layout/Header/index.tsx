@@ -39,8 +39,10 @@ const Header: React.FC = () => {
           <Link href='/snippets'>
             <a style={asPath === '/snippets' ? activeStyle : {}}>Snippets</a>
           </Link>
+          <a href='/static/Resume.pdf' target='_blank' rel='noreferrer'>
+            Download CV
+          </a>
         </div>
-
         <ThemeChanger />
       </div>
     </header>
