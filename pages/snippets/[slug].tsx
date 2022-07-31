@@ -9,6 +9,7 @@ import SyntaxHighlighter from '../../components/SyntaxHighlighter';
 import { useRouter } from 'next/router';
 import styles from '../../styles/Snippets.module.css';
 import codes, { CodesProps } from '../../mock_data/codes';
+import Head from 'next/head';
 
 interface Params extends ParsedUrlQuery {
   slug: string;
@@ -55,6 +56,9 @@ const Snippet: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
   const router = useRouter();
   return (
     <div className='container'>
+      <Head>
+        <title>{code.title} | Ramil Saavedra</title>
+      </Head>
       <div className={styles.backButton} onClick={() => router.back()}>
         <svg
           width='15'
