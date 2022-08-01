@@ -1,0 +1,47 @@
+.subheading {
+  color: var(--subheading-color);
+}
+
+.certificates {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.certificate {
+  /* border: 1px solid var(--description-color); */
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.certificateDiv {
+  background: var(--tech-background);
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.certificateDiv p {
+  color: var(--description-color);
+}
+
+.certificateDiv::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(188, 7, 53, 1) 50%,
+    rgba(188, 7, 53, 1) 100%
+  );
+}
