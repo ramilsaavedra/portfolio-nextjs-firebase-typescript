@@ -1,11 +1,16 @@
-import type { NextPage } from 'next';
+import type { NextPage, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Certificates.module.css';
 import CustomLink from '../components/CustomLink';
-import { certificates as certificatesData } from '../mock_data/certificates';
+import {
+  certificates as certificatesData,
+  CertificatesProps,
+} from '../mock_data/certificates';
 
-const certificates: NextPage = ({ data }) => {
+const certificates: NextPage<
+  InferGetStaticPropsType<typeof getStaticProps>
+> = ({ data }) => {
   return (
     <div className='container'>
       <Head>
@@ -14,8 +19,8 @@ const certificates: NextPage = ({ data }) => {
       <h1>Certificates</h1>
       <p className={styles.subheading}>List of my udemy course certificates</p>
       <div className={styles.certificates}>
-        {certificatesData &&
-          certificatesData.map((certificate) => (
+        {data &&
+          data.map((certificate) => (
             <div className={styles.certificate} key={certificate.id}>
               <Image
                 src={certificate.src}
@@ -38,7 +43,7 @@ const certificates: NextPage = ({ data }) => {
 };
 
 export const getStaticProps = () => {
-  const data = certificatesData;
+  const data: CertificatesProps[] = certificatesData;
 
   return { props: { data } };
 };

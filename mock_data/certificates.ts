@@ -1,4 +1,12 @@
-export const certificates = [
+export interface CertificatesProps {
+  id: number;
+  title: string;
+  instructor: string;
+  src: string;
+  link: string;
+}
+
+export const certificates: CertificatesProps[] = [
   {
     id: 2,
     title: 'React Front To Back (2022)',
