@@ -55,3 +55,22 @@ export const getCurrentlyPlaying = async () => {
     console.error(error);
   }
 };
+
+export const getTopTracks = async () => {
+  const token: GetRefreshableUserTokensResponse = await getAccessToken();
+  const res = await axios.get(
+    'https://api.spotify.com/v1/me/top/tracks',
+
+    {
+      headers: {
+        Authorization: `Bearer ${token.access_token}`,
+      },
+    }
+  );
+
+  try {
+    return res.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
