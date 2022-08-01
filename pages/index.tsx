@@ -42,7 +42,7 @@ const Home: NextPage = () => {
             codeText='View source code'
           />
           <GoToPage className={styles.goToProjects} href='/projects'>
-            See all projects
+            Go to projects page
           </GoToPage>
         </div>
 
@@ -65,8 +65,8 @@ const Home: NextPage = () => {
             homeUrl='https://www.udemy.com/course/node-with-react-fullstack-web-development/'
             homeText='View course'
           />
-          <GoToPage className={styles.goToProjects} href='/'>
-            See all my online certificates
+          <GoToPage className={styles.goToProjects} href='/certificates'>
+            View my certificates
           </GoToPage>
         </div>
       </div>

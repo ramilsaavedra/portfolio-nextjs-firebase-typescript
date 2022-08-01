@@ -9,9 +9,9 @@
 }
 
 .codeWrap {
-  margin-top: 15px;
+  margin-top: 30px;
   display: grid;
-  gap: 10px;
+  gap: 20px;
   grid-template-columns: 1fr 1fr;
 }
 

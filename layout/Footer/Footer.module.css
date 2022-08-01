@@ -16,6 +16,12 @@
 
 .subDiv a {
   color: var(--footer-link);
+  transition: all 0.3s ease;
+}
+
+.subDiv a:hover {
+  color: var(--heading-1-color);
+  text-decoration: underline;
 }
 
 .credits {

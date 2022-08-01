@@ -49,6 +49,9 @@ const Footer: React.FC = () => {
           <Link href='/snippets'>
             <a>Snippets</a>
           </Link>
+          <Link href='/certificates'>
+            <a>Certificates</a>
+          </Link>
           <Link href='/top-tracks'>
             <a>Top Tracks</a>
           </Link>

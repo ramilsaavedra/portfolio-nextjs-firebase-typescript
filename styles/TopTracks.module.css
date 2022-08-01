@@ -1,3 +1,8 @@
+.tracks {
+  padding-right: 40px;
+  margin-top: 30px;
+}
+
 .track::marker {
   color: var(--footer-link);
   font-weight: 700;

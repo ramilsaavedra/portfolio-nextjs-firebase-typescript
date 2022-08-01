@@ -8,8 +8,6 @@ import Image from 'next/image';
 const topTracks: NextPage<
   InferGetServerSidePropsType<typeof getServerSideProps>
 > = ({ data }) => {
-  console.log(data, 'data');
-
   return (
     <div className='container'>
       <Head>
@@ -62,7 +60,6 @@ const topTracks: NextPage<
 export const getServerSideProps = async () => {
   const topTracks: SpotifyApi.UsersTopTracksResponse = await getTopTracks();
 
-  // console.log(topTracks, 'top tracks');
   return { props: { data: topTracks } };
 };
 
