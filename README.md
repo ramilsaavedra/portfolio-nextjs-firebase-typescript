@@ -1,6 +1,6 @@
 # [jetspace.info](https://ramilsaavedra.vercel.app/)
 
-My portfolio website that heavily inspired by [leerob.io](https://leerob.io/). This project is built to understand different rendering options offered by [NextJS](https://reactjs.org/), to familiarize [ReactJS](https://reactjs.org/) with [Typescript](https://www.typescriptlang.org/) and 3rd party api intergration like [`Spotify`](https://www.spotify.com/) with [Typescript](https://www.typescriptlang.org/) and to practice[Firebase](https://firebase.google.com/)
+My portfolio website that heavily inspired by [leerob.io](https://leerob.io/). This project is built to understand different rendering options offered by [NextJS](https://reactjs.org/), to familiarize [ReactJS](https://reactjs.org/) with [Typescript](https://www.typescriptlang.org/) and 3rd party api intergration like [`Spotify`](https://www.spotify.com/) with [Typescript](https://www.typescriptlang.org/) and to practice [Firebase](https://firebase.google.com/)
 
 ## Technologies
 
