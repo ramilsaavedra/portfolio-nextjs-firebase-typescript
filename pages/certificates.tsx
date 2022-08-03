@@ -3,14 +3,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Certificates.module.css';
 import CustomLink from '../components/CustomLink';
-import {
-  certificates as certificatesData,
-  CertificatesProps,
-} from '../mock_data/certificates';
+import { fetchCertificates } from '../lib/firebase/certificateAction';
 
-const certificates: NextPage<
+const Certificates: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
-> = ({ data }) => {
+> = ({ certificates }) => {
   return (
     <div className='container'>
       <Head>
@@ -19,11 +16,11 @@ const certificates: NextPage<
       <h1>Certificates</h1>
       <p className={styles.subheading}>List of my udemy course certificates</p>
       <div className={styles.certificates}>
-        {data &&
-          data.map((certificate) => (
+        {certificates &&
+          certificates.map((certificate) => (
             <div className={styles.certificate} key={certificate.id}>
               <Image
-                src={certificate.src}
+                src={certificate.imageSrc}
                 width={760}
                 height={560}
                 alt={certificate.title}
@@ -42,10 +39,10 @@ const certificates: NextPage<
   );
 };
 
-export const getStaticProps = () => {
-  const data: CertificatesProps[] = certificatesData;
+export const getStaticProps = async () => {
+  const certificates = await fetchCertificates();
 
-  return { props: { data } };
+  return { props: { certificates } };
 };
 
-export default certificates;
+export default Certificates;

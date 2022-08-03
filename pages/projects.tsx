@@ -1,12 +1,14 @@
-import type { NextPage } from 'next';
+import type { NextPage, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Projects.module.css';
 import ProjectItem from '../components/ProjectItem';
 import GoToPage from '../components/GoToPage';
 import Contact from '../layout/Contact';
-import { projects } from '../mock_data/projects';
+import { fetchProjects } from '../lib/firebase/projectAction';
 
-const Projects: NextPage = () => {
+const Projects: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  projects,
+}) => {
   return (
     <>
       <div className={`container ${styles.container}`}>
@@ -28,9 +30,9 @@ const Projects: NextPage = () => {
                   description={project.description}
                   imageSrc={project.imageSrc}
                   homeUrl={project.homeUrl}
-                  homeText={project.homeText}
+                  homeText='Visit website'
                   codeUrl={project.codeUrl}
-                  codeText={project.codeText}
+                  codeText='View source code'
                 />
               );
             })}
@@ -43,4 +45,11 @@ const Projects: NextPage = () => {
     </>
   );
 };
+
+export const getStaticProps = async () => {
+  const projects = await fetchProjects();
+
+  return { props: { projects } };
+};
+
 export default Projects;
