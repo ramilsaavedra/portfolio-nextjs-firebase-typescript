@@ -3,7 +3,6 @@ import {
   query,
   getDocs,
   QuerySnapshot,
-  orderBy,
 } from 'firebase/firestore/lite';
 import { db } from './firebase.config';
 
@@ -23,7 +22,7 @@ export const fetchCodeSnippets = async () => {
   try {
     const codeSnippetsRef = collection(db, 'CodeSnippets');
 
-    const _query = query(codeSnippetsRef, orderBy('timeStamp', 'desc'));
+    const _query = query(codeSnippetsRef);
 
     const querySnapshot: QuerySnapshot = await getDocs(_query);
 
