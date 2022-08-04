@@ -8,8 +8,12 @@ import { ParsedUrlQuery } from 'querystring';
 import SyntaxHighlighter from '../../components/SyntaxHighlighter';
 import { useRouter } from 'next/router';
 import styles from '../../styles/Snippets.module.css';
-import codes, { CodesProps } from '../../mock_data/codes';
 import Head from 'next/head';
+import {
+  fetchCodeSnippet,
+  fetchCodeSnippets,
+  CodesProps,
+} from '../../lib/firebase/codeSnippetsAction';
 
 interface Params extends ParsedUrlQuery {
   slug: string;
@@ -19,23 +23,24 @@ interface SnippetProps {
   code: CodesProps;
 }
 
-export const getStaticPaths: GetStaticPaths<Params> = () => {
-  const data: CodesProps[] = codes;
-  const paths = data.map((code) => ({
+export const getStaticPaths: GetStaticPaths = async () => {
+  const data = await fetchCodeSnippets();
+
+  const paths = data!.map((code) => ({
     params: { slug: code.slug },
   }));
 
   return {
     paths,
-    fallback: false,
+    fallback: 'blocking',
   };
 };
 
-export const getStaticProps: GetStaticProps<SnippetProps, Params> = (
+export const getStaticProps: GetStaticProps<SnippetProps, Params> = async (
   context
 ) => {
   const { slug } = context.params!;
-  const data: CodesProps | undefined = codes.find((code) => code.slug === slug);
+  const data = await fetchCodeSnippet(slug);
 
   if (data) {
     return { props: { code: data } };
@@ -54,6 +59,7 @@ const Snippet: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
 ) => {
   const { code } = props;
   const router = useRouter();
+
   return (
     <div className='container'>
       <Head>

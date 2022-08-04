@@ -3,7 +3,7 @@ import Head from 'next/head';
 import styles from '../../styles/Snippets.module.css';
 import Contact from '../../layout/Contact';
 import CodeSnippet from '../../components/CodeSnippet';
-import codes, { CodesProps } from '../../mock_data/codes';
+import { fetchCodeSnippets } from '../../lib/firebase/codeSnippetsAction';
 
 const snippets: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   data,
@@ -20,17 +20,18 @@ const snippets: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           can be used in multiple projects for faster development
         </p>
         <div className={styles.codeWrap}>
-          {data.map((code) => (
-            <CodeSnippet
-              href={{
-                pathname: `/snippets/${code.slug}`,
-              }}
-              key={code.id}
-              title={code.title}
-              description={code.description}
-              tech={code.tech}
-            />
-          ))}
+          {data &&
+            data.map((code) => (
+              <CodeSnippet
+                href={{
+                  pathname: `/snippets/${code.slug}`,
+                }}
+                key={code.id}
+                title={code.title}
+                description={code.description}
+                tech={code.tech}
+              />
+            ))}
         </div>
       </div>
       <Contact />
@@ -38,8 +39,8 @@ const snippets: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   );
 };
 
-export const getStaticProps = () => {
-  const data: CodesProps[] = codes;
+export const getStaticProps = async () => {
+  const data = await fetchCodeSnippets();
 
   return { props: { data } };
 };

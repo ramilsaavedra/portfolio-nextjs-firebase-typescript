@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/prettier": "^2.6.4",
     "@types/spotify-api": "^0.0.16",
     "axios": "^0.27.2",
     "babel-plugin-prismjs": "^2.1.0",
+    "firebase": "^9.9.1",
     "next": "12.2.3",
     "next-themes": "^0.2.0",
+    "prettier": "^2.7.1",
     "prismjs": "^1.28.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-firebase-hooks": "^5.0.3"
   },
   "devDependencies": {
     "@types/node": "18.6.1",
