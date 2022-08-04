@@ -21,10 +21,33 @@ const Document = (props: DocumentProps) => {
           sizes='16x16'
           href='/favicon-16x16.png'
         />
+
+        {/* OG */}
+        <meta property='og:type' content='website' />
+        <meta
+          property='og:title'
+          content='Ramil Saavedra | Software Engineer'
+        />
+        <meta
+          property='og:description'
+          content='Hi!👋 I am a software engineer from the Philippines. I love spending
+            my time admiring the beauty of web development, from learning new
+            technologies to building a web application that can heavily
+            contribute to the community.'
+        />
         <meta
           property='og:image'
-          content='/static/images/opengraph-image.jpg'
+          content='/static/images/ramil-saavedra-software-engineer.jpg'
         />
+        <meta
+          property='og:image:alt'
+          content='Ramil Saavedra | Software Engineer'
+        />
+
+        {/* twitter */}
+        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:creator' content='@SaavedraRamil' />
+        <meta name='twitter:image' content='/static/images/twitter-image.png' />
       </Head>
       <body>
         <Main />
