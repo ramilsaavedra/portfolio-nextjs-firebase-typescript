@@ -12,8 +12,10 @@ const SyntaxHighlighter: React.FC<SyntaxHighlighterProps> = ({
   tech,
 }) => {
   useEffect(() => {
-    Prism.highlightAll();
-  }, []);
+    if (code) {
+      Prism.highlightAll();
+    }
+  }, [code]);
 
   return (
     <pre>

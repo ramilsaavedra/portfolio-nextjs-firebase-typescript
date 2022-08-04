@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import type {
   NextPage,
   InferGetStaticPropsType,
@@ -8,8 +9,16 @@ import { ParsedUrlQuery } from 'querystring';
 import SyntaxHighlighter from '../../components/SyntaxHighlighter';
 import { useRouter } from 'next/router';
 import styles from '../../styles/Snippets.module.css';
-import codes, { CodesProps } from '../../mock_data/codes';
 import Head from 'next/head';
+import {
+  fetchCodeSnippet,
+  fetchCodeSnippets,
+  CodesProps,
+} from '../../lib/firebase/codeSnippetsAction';
+//@ts-ignore
+import prettier from 'prettier';
+import css from 'prettier/parser-postcss';
+import babel from 'prettier/parser-babel';
 
 interface Params extends ParsedUrlQuery {
   slug: string;
@@ -19,23 +28,24 @@ interface SnippetProps {
   code: CodesProps;
 }
 
-export const getStaticPaths: GetStaticPaths<Params> = () => {
-  const data: CodesProps[] = codes;
-  const paths = data.map((code) => ({
+export const getStaticPaths: GetStaticPaths = async () => {
+  const data = await fetchCodeSnippets();
+
+  const paths = data!.map((code) => ({
     params: { slug: code.slug },
   }));
 
   return {
     paths,
-    fallback: false,
+    fallback: 'blocking',
   };
 };
 
-export const getStaticProps: GetStaticProps<SnippetProps, Params> = (
+export const getStaticProps: GetStaticProps<SnippetProps, Params> = async (
   context
 ) => {
   const { slug } = context.params!;
-  const data: CodesProps | undefined = codes.find((code) => code.slug === slug);
+  const data = await fetchCodeSnippet(slug);
 
   if (data) {
     return { props: { code: data } };
@@ -54,6 +64,21 @@ const Snippet: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
 ) => {
   const { code } = props;
   const router = useRouter();
+  const [formatted, setFormatted] = useState('');
+
+  useEffect(() => {
+    if (code) {
+      setFormatted(
+        prettier.format(code.code, {
+          parser: code.tech === 'css' ? 'css' : 'babel',
+          plugins: code.tech === 'css' ? [css] : [babel],
+          useTabs: false,
+          semi: true,
+          singleQuote: true,
+        })
+      );
+    }
+  }, [code]);
   return (
     <div className='container'>
       <Head>
@@ -76,7 +101,7 @@ const Snippet: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
       </div>
       <h3>{code.title}</h3>
       <p className={styles.codeDescription}>{code.description}</p>
-      <SyntaxHighlighter tech={code.tech} code={code.code} />
+      <SyntaxHighlighter tech={code.tech} code={formatted} />
     </div>
   );
 };
