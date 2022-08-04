@@ -4,6 +4,7 @@
 
 .title {
   color: var(--heading-3-color);
+  font-size: 25px;
 }
 
 .techWrap {
