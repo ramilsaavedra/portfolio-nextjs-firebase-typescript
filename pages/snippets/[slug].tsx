@@ -15,7 +15,7 @@ import {
   fetchCodeSnippets,
   CodesProps,
 } from '../../lib/firebase/codeSnippetsAction';
-//@ts-ignore
+
 import prettier from 'prettier';
 import css from 'prettier/parser-postcss';
 import babel from 'prettier/parser-babel';
@@ -64,6 +64,7 @@ const Snippet: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
 ) => {
   const { code } = props;
   const router = useRouter();
+
   const [formatted, setFormatted] = useState('');
 
   useEffect(() => {
@@ -71,7 +72,7 @@ const Snippet: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
       setFormatted(
         prettier.format(code.code, {
           parser: code.tech === 'css' ? 'css' : 'babel',
-          plugins: code.tech === 'css' ? [css] : [babel],
+          plugins: [css, babel],
           useTabs: false,
           semi: true,
           singleQuote: true,
