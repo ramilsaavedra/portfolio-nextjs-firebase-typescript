@@ -21,7 +21,7 @@ const Document = (props: DocumentProps) => {
           sizes='16x16'
           href='/favicon-16x16.png'
         />
-        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@SaavedraRamil' />
         <meta name='twitter:creator' content='@SaavedraRamil' />
         <meta property='og:type' content='article' />
@@ -38,7 +38,7 @@ const Document = (props: DocumentProps) => {
         />
         <meta
           property='og:image'
-          content='/static/images/opengraph-image.jpg'
+          content='/static/images/ramil-saavedra-software-engineer'
         />
         <meta
           property='og:image:alt'
