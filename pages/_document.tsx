@@ -21,6 +21,10 @@ const Document = (props: DocumentProps) => {
           sizes='16x16'
           href='/favicon-16x16.png'
         />
+        <meta
+          property='og:image'
+          content='/static/images/opengraph-image.jpg'
+        />
       </Head>
       <body>
         <Main />
