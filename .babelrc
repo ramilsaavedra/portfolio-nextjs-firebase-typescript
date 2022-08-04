@@ -6,7 +6,7 @@
       {
         "languages": ["javascript", "css", "tsx", "jsx"],
         "plugins": ["line-numbers"],
-        "theme": "twilight",
+        "theme": "tomorrow",
         "css": true
       }
     ]
