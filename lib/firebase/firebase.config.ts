@@ -2,13 +2,13 @@ import { initializeApp, getApps, getApp, FirebaseApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore/lite';
 
 const clientCredentials = {
-  apiKey: 'AIzaSyDcbbeklJTSnW0aFfwm94JVt7JAtdKhUlI',
-  authDomain: 'portfolio-78183.firebaseapp.com',
-  projectId: 'portfolio-78183',
-  storageBucket: 'portfolio-78183.appspot.com',
-  messagingSenderId: '335294303345',
-  appId: '1:335294303345:web:f160fb454899727e015fd0',
-  measurementId: 'G-0YJCJPDGX6',
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
 };
 
 let app: FirebaseApp;
