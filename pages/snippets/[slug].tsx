@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import type {
   NextPage,
   InferGetStaticPropsType,
@@ -15,10 +14,6 @@ import {
   fetchCodeSnippets,
   CodesProps,
 } from '../../lib/firebase/codeSnippetsAction';
-
-import prettier from 'prettier';
-import css from 'prettier/parser-postcss';
-import babel from 'prettier/parser-babel';
 
 interface Params extends ParsedUrlQuery {
   slug: string;
@@ -65,21 +60,6 @@ const Snippet: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
   const { code } = props;
   const router = useRouter();
 
-  const [formatted, setFormatted] = useState('');
-
-  useEffect(() => {
-    if (code) {
-      setFormatted(
-        prettier.format(code.code, {
-          parser: code.tech === 'css' ? 'css' : 'babel',
-          plugins: [css, babel],
-          useTabs: false,
-          semi: true,
-          singleQuote: true,
-        })
-      );
-    }
-  }, [code]);
   return (
     <div className='container'>
       <Head>
@@ -102,7 +82,7 @@ const Snippet: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
       </div>
       <h3>{code.title}</h3>
       <p className={styles.codeDescription}>{code.description}</p>
-      <SyntaxHighlighter tech={code.tech} code={formatted} />
+      <SyntaxHighlighter tech={code.tech} code={code.code} />
     </div>
   );
 };
