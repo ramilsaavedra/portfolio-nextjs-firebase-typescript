@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/prettier": "^2.6.4",
     "@types/spotify-api": "^0.0.16",
     "axios": "^0.27.2",
     "babel-plugin-prismjs": "^2.1.0",
