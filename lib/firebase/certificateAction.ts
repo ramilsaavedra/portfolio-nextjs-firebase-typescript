@@ -39,5 +39,6 @@ export const fetchCertificates = async () => {
     return certificates;
   } catch (error) {
     console.log(error, 'error');
+    return null;
   }
 };

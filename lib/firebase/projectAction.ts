@@ -44,5 +44,6 @@ export const fetchProjects = async () => {
     return projects;
   } catch (error) {
     console.log(error, 'error');
+    return null;
   }
 };
