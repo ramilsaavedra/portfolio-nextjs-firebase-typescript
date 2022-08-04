@@ -1,0 +1,62 @@
+.div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  gap: 20px;
+  text-align: center;
+}
+
+.h1 {
+  font-size: 100px;
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(188, 7, 53, 1) 50%,
+    rgba(188, 7, 53, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.h2 {
+  font-weight: 300;
+}
+
+.a {
+  cursor: pointer;
+  display: inline;
+}
+
+.a span {
+  display: inline;
+  position: relative;
+}
+
+.a span::before,
+.a span::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+}
+
+.a span::after {
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.a span:hover::after {
+  background: rgba(188, 7, 53, 1);
+}
+
+@media only screen and (max-width: 598px) {
+  .a {
+    display: grid;
+    justify-content: center;
+  }
+}
