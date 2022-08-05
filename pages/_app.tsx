@@ -9,9 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
       <Header />
-      <Abstract />
       <Component {...pageProps} />
       <Footer />
+      <Abstract />
     </ThemeProvider>
   );
 }
