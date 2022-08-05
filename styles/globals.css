@@ -42,10 +42,6 @@ body {
   background: var(--background);
 }
 
-body {
-  position: relative;
-}
-
 html {
   overflow-y: scroll;
   scroll-behavior: smooth;
