@@ -9,8 +9,7 @@ const Header: React.FC = () => {
   const { asPath } = useRouter();
 
   const activeStyle = {
-    color: 'var(--active-link)',
-    fontWeight: 'bold',
+    color: 'var(--primary)',
   };
 
   useEffect(() => {
