@@ -16,12 +16,12 @@ const Home: NextPage = () => {
         <div className={styles.landing}>
           <h1>Ramil Saavedra</h1>
           <p className={styles.subheading}>Software Engineer</p>
-          <p className={styles.description}>
+          <div className={styles.description}>
             Hi!<div className='wave'>👋</div> I am a software engineer from the
             Philippines. I love spending my time admiring the beauty of web
             development, from learning new technologies to building a web
             application that can heavily contribute to the community.
-          </p>
+          </div>
           <div className={styles.ctaDiv}>
             <LinkButton href='/static/Resume.pdf'>Download CV</LinkButton>
             <GoToPage href='/about'>Go to about page</GoToPage>

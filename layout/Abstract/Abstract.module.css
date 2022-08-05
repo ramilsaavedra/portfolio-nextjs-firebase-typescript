@@ -1,0 +1,39 @@
+.abstractOne,
+.abstractTwo,
+.abstractThree {
+  position: absolute;
+  z-index: 1;
+}
+
+.abstractOne,
+.abstractThree {
+  left: 0;
+}
+
+.abstractOne {
+  top: 25px;
+}
+
+.abstractTwo {
+  top: 200px;
+  right: 0;
+}
+
+.abstractThree {
+  top: 650px;
+}
+
+@media only screen and (max-width: 820px) {
+  .abstractOne,
+  .abstractThree {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 598px) {
+  .abstractOne,
+  .abstractTwo,
+  .abstractThree {
+    display: none;
+  }
+}
