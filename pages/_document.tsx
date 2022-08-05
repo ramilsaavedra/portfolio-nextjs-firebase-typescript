@@ -28,7 +28,6 @@ const Document = (props: DocumentProps) => {
             technologies to building a web application that can heavily
             contribute to the community.'
         />
-        {/* OG */}
         <meta property='og:type' content='website' />
         <meta
           property='og:title'
@@ -50,7 +49,6 @@ const Document = (props: DocumentProps) => {
           content='Ramil Saavedra | Software Engineer'
         />
 
-        {/* twitter */}
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:creator' content='@SaavedraRamil' />
         <meta name='twitter:image' content='/static/images/twitter-image.png' />
