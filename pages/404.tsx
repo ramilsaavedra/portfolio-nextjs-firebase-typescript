@@ -12,7 +12,7 @@ const Custom404: NextPage = () => {
         <h1 className={styles.h1}>Lost?</h1>
         <h2 className={styles.h2}>
           There is no place like{' '}
-          <Link href='/'>
+          <Link href='/' replace={true}>
             <div className={styles.a}>
               <span>home</span>
             </div>
