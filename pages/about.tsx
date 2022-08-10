@@ -29,7 +29,7 @@ const about: NextPage = () => {
             ability to turn ideas into reality.
           </p>
           <p className={styles.bioText}>
-            In 4 years of experience in the industry, I built multiple projects
+            In 3 years of experience in the industry, I built multiple projects
             from static to complex web applications using different tools and
             technologies.
           </p>
@@ -73,11 +73,11 @@ const about: NextPage = () => {
               <span>Website:</span>
               <a
                 className={styles.link}
-                href='https://ramilsaavedra.vercel.app/'
+                href='https://www.jetdev.info'
                 target='_blank'
                 rel='noreferrer'
               >
-                https://ramilsaavedra.vercel.app/
+                https://www.jetdev.info
               </a>
             </div>
           </li>
