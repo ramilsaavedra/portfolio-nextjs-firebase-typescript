@@ -23,7 +23,7 @@ const Document = (props: DocumentProps) => {
         />
         <meta
           name='description'
-          content='Hi!👋 I am a software engineer from the Philippines. I love spending
+          content='Hi!👋 I am a full stack web developer from the Philippines. I love spending
             my time admiring the beauty of web development, from learning new
             technologies to building a web application that can heavily
             contribute to the community.'
@@ -31,11 +31,11 @@ const Document = (props: DocumentProps) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:title'
-          content='Ramil Saavedra | Software Engineer'
+          content='Ramil Saavedra | Full stack Web Developer'
         />
         <meta
           property='og:description'
-          content='Hi!👋 I am a software engineer from the Philippines. I love spending
+          content='Hi!👋 I am a full stack web developer from the Philippines. I love spending
             my time admiring the beauty of web development, from learning new
             technologies to building a web application that can heavily
             contribute to the community.'
@@ -46,7 +46,7 @@ const Document = (props: DocumentProps) => {
         />
         <meta
           property='og:image:alt'
-          content='Ramil Saavedra | Software Engineer'
+          content='Ramil Saavedra | Full stack Web Developer'
         />
 
         <meta name='twitter:card' content='summary' />
