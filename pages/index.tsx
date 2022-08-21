@@ -11,11 +11,11 @@ const Home: NextPage = () => {
     <>
       <div className={`container ${styles.container}`}>
         <Head>
-          <title>Ramil Saavedra | Full stack Web Developer</title>
+          <title>Ramil Saavedra | Full Stack Web Developer</title>
         </Head>
         <div className={styles.landing}>
           <h1>Ramil Saavedra</h1>
-          <p className={styles.subheading}>Full stack Web Developer</p>
+          <p className={styles.subheading}>Full Stack Web Developer</p>
           <div className={styles.description}>
             Hi!<div className='wave'>👋</div> I am a full stack web developer
             from the Philippines. I love spending my time admiring the beauty of
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
           />
 
           <ProjectItem
-            title='Node with React: Full stack Web Development'
+            title='Node with React: Full Stack Web Development'
             description='This courses teaches how to build and deploy full stack web app with NodeJS, React, Redux, Express and MongoDB.'
             homeUrl='https://www.udemy.com/course/node-with-react-fullstack-web-development/'
             homeText='View course'

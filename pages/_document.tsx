@@ -31,7 +31,7 @@ const Document = (props: DocumentProps) => {
         <meta property='og:type' content='website' />
         <meta
           property='og:title'
-          content='Ramil Saavedra | Full stack Web Developer'
+          content='Ramil Saavedra | Full Stack Web Developer'
         />
         <meta
           property='og:description'
@@ -46,7 +46,7 @@ const Document = (props: DocumentProps) => {
         />
         <meta
           property='og:image:alt'
-          content='Ramil Saavedra | Full stack Web Developer'
+          content='Ramil Saavedra | Full Stack Web Developer'
         />
 
         <meta name='twitter:card' content='summary' />
