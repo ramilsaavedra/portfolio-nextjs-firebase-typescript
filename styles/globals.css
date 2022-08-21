@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Source San 3';
-  src: url('../public/static/fonts/Source-Sans-3.ttf');
+  font-family: 'Mulish';
+  src: url('../public/static/fonts/Mulish.ttf');
 }
 
 :root {
@@ -43,9 +43,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Source San 3', -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
+  font-family: 'Mulish', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: var(--background);
 }
 
