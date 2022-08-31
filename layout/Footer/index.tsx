@@ -9,7 +9,11 @@ const Footer: React.FC = () => {
       <div className={`container ${style.mainDiv}`}>
         <SpotifyCurrentlyPlaying />
         <div className={style.subDiv}>
-          <a href='/static/Resume.pdf' target='_blank' rel='noreferrer'>
+          <a
+            href='/static/Ramil_Saavedra_CV.pdf'
+            target='_blank'
+            rel='noreferrer'
+          >
             Download CV
           </a>
           <Link href='/'>

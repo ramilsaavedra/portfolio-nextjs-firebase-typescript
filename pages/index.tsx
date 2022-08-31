@@ -23,7 +23,9 @@ const Home: NextPage = () => {
             application that can heavily contribute to the community.
           </div>
           <div className={styles.ctaDiv}>
-            <LinkButton href='/static/Resume.pdf'>Download CV</LinkButton>
+            <LinkButton href='/static/Ramil_Saavedra_CV.pdf'>
+              Download CV
+            </LinkButton>
             <GoToPage href='/about'>Go to about page</GoToPage>
           </div>
         </div>
