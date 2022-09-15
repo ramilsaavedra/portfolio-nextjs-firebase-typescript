@@ -42,7 +42,7 @@ const Document = (props: DocumentProps) => {
         />
         <meta
           property='og:image'
-          content='/static/images/ramil-saavedra-software-engineer.jpg'
+          content='/static/images/ramil-saavedra-og.png'
         />
         <meta
           property='og:image:alt'
