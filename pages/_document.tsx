@@ -33,6 +33,7 @@ const Document = (props: DocumentProps) => {
           property='og:title'
           content='Ramil Saavedra | Full Stack Web Developer'
         />
+        <meta property='og:site-name_title' content='Ramil Saavedra' />
         <meta
           property='og:description'
           content='Hi!👋 I am a full stack web developer from the Philippines. I love spending
@@ -49,7 +50,7 @@ const Document = (props: DocumentProps) => {
           content='Ramil Saavedra | Full Stack Web Developer'
         />
 
-        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:creator' content='@SaavedraRamil' />
         <meta name='twitter:image' content='/static/images/twitter-image.png' />
       </Head>
