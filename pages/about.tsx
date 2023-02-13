@@ -37,7 +37,7 @@ const about: NextPage = () => {
         <div>
           <Image
             className={styles.avatar}
-            src='/static/images/about/me.jpg'
+            src='/static/images/about/me-2.jpg'
             alt='Ramil Saavedra'
             height={200}
             width={200}
