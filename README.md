@@ -11,7 +11,6 @@ My portfolio website that heavily inspired by [leerob.io](https://leerob.io/). T
 - [Vercel](https://vercel.com/)
 - [Figma](https://www.figma.com/)
 
-
 ## Important Link
 
 1. [Figma Design](https://www.figma.com/file/wSCt4Shcsyvu8fhUcv3MYS/Portfolio-2022?node-id=0%3A1)

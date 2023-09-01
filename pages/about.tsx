@@ -73,11 +73,11 @@ const about: NextPage = () => {
               <span>Website:</span>
               <a
                 className={styles.link}
-                href='https://www.jetdev.info'
+                href='https://www.ramilsaavedra.com/'
                 target='_blank'
                 rel='noreferrer'
               >
-                https://www.jetdev.info
+                https://www.ramilsaavedra.com/
               </a>
             </div>
           </li>
@@ -165,10 +165,10 @@ const about: NextPage = () => {
           <li>
             <div className={styles.contactWrap}>
               <span>Discord:</span>
-              <p>Jet#8854</p>
+              <p>jetdev</p>
               <div
                 className={styles.contactWrapCopyButton}
-                onClick={() => copyToClipBoard('Jet#8854')}
+                onClick={() => copyToClipBoard('jetdev')}
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
