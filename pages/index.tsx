@@ -60,6 +60,7 @@ const Home: NextPage = () => {
 
 					<ProjectItem
 						title="WQAPH"
+						techs={['NextJS 14', 'Typescript', 'Zod', 'React']}
 						description="Revamp wqaph.com by implementing a dashboard feature using Next.js, Tailwind, and Next UI. This project aims to enhance user experience and functionality while providing a modern and sleek design."
 						imageSrc="/static/images/projects/wqaph.png"
 						homeUrl="https://www.figma.com/design/XJu6hQDjlWNjJvuig2jDFq/WQAPH-UI-Kit?node-id=0%3A1&t=oZZPJA6qwlkXnyCC-1"
