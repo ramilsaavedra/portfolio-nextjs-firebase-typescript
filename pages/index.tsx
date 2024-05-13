@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 					<p className={styles.subheading}>Web Developer</p>
 					<div className={styles.description}>
 						Hi!<div className="wave">👋</div> I&lsquo;m a web developer from the Philippines. I love spending my time admiring the beauty of
-						web development, from learning new technologies to building a web application that can heavily simplify life.
+						web development, from learning new technologies to building a web application that can simplify life.
 					</div>
 					<div className={styles.ctaDiv}>
 						<LinkButton href="/static/Ramil_Saavedra_CV.pdf">Download CV</LinkButton>
